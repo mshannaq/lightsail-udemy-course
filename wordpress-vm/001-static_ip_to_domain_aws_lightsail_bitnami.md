@@ -29,7 +29,7 @@ www.lightsailcourse.com
 sudo nano /opt/bitnami/apache2/conf/bitnami/bitnami.conf
 ```
 
-ونضيف
+ونضيف في المكان المناسب
 
 ```
 # BEGIN: IP to Domain
@@ -43,7 +43,7 @@ RewriteRule ^(.*)$ https://www.lightsailcourse.com$1 [R=permanent,L]
 ```
 sudo nano /opt/bitnami/apache/conf/bitnami/bitnami-ssl.conf
 ```
-ونضيف
+ونضيف في المكان المناسب
 ```
 # BEGIN: IP to Domain
 RewriteEngine On
@@ -56,7 +56,7 @@ RewriteRule ^(.*)$ https://www.lightsailcourse.com$1 [R=permanent,L]
 ```
 sudo nano /opt/bitnami/apache2/conf/vhosts/wordpress-vhost.conf
 ```
-ونضيف
+ونضيف في المكان المناسب
 ```
 # BEGIN: IP to Domain
 RewriteEngine On
@@ -69,7 +69,7 @@ RewriteRule ^(.*)$ https://www.lightsailcourse.com$1 [R=permanent,L]
 ```
 sudo nano /opt/bitnami/apache2/conf/vhosts/wordpress-https-vhost.conf
 ```
-ونضيف
+ونضيف في المكان المناسب
 ```
 # BEGIN: IP to Domain
 RewriteEngine On
