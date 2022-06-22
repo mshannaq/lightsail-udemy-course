@@ -38,7 +38,9 @@ RewriteRule ^(.*)$ https://www.lightsailcourse.com$1 [R=permanent,L]
 ```
 
 نحرر الملف عن طريق الامر
+```
 sudo nano /opt/bitnami/apache/conf/bitnami/bitnami-ssl.conf
+```
 
 ```
 # BEGIN: IP to Domain
@@ -49,7 +51,9 @@ RewriteRule ^(.*)$ https://www.lightsailcourse.com$1 [R=permanent,L]
 # END: IP to Domain
 ```
 نحرر الملف عن طريق الامر
+```
 sudo nano /opt/bitnami/apache2/conf/vhosts/wordpress-vhost.conf
+```
 
 ```
 # BEGIN: IP to Domain
@@ -60,7 +64,9 @@ RewriteRule ^(.*)$ https://www.lightsailcourse.com$1 [R=permanent,L]
 ```
 
 نحرر الملف عن طريق الامر
+```
 sudo nano /opt/bitnami/apache2/conf/vhosts/wordpress-https-vhost.conf
+```
 
 ```
 # BEGIN: IP to Domain
@@ -74,6 +80,8 @@ RewriteRule ^(.*)$ https://www.lightsailcourse.com$1 [R=permanent,L]
 
 ثم تنفيذ الامر
 
+```
 sudo /opt/bitnami/ctlscript.sh restart apache
+```
 
 من اجل اعادة تشغيل الويب سيرفر
