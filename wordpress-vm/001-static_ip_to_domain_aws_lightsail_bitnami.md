@@ -36,22 +36,24 @@ RewriteRule ^(.*)$ https://www.lightsailcourse.com$1 [R=permanent,L]
 نحرر الملف عن طريق الامر
 sudo nano /opt/bitnami/apache/conf/bitnami/bitnami-ssl.conf
 
+```
 # BEGIN: IP to Domain
 RewriteEngine On
 RewriteCond %{HTTP_HOST} !^www.lightsailcourse.com$
 RewriteCond %{HTTP_HOST} !^(localhost|127.0.0.1)
 RewriteRule ^(.*)$ https://www.lightsailcourse.com$1 [R=permanent,L]
 # END: IP to Domain
-
+```
 نحرر الملف عن طريق الامر
 sudo nano /opt/bitnami/apache2/conf/vhosts/wordpress-vhost.conf
 
+```
 # BEGIN: IP to Domain
 RewriteEngine On
 RewriteCond %{HTTP_HOST} !^(localhost|127.0.0.1)
 RewriteRule ^(.*)$ https://www.lightsailcourse.com$1 [R=permanent,L]
 # END: IP to Domain
-
+```
 
 نحرر الملف عن طريق الامر
 sudo nano /opt/bitnami/apache2/conf/vhosts/wordpress-https-vhost.conf
