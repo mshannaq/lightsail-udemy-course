@@ -25,7 +25,9 @@ www.lightsailcourse.com
 بالدومين الخاص بك
 
 نحرر الملف عن طريق الامر
+```
 sudo nano /opt/bitnami/apache2/conf/bitnami/bitnami.conf
+```
 
 ```
 # BEGIN: IP to Domain
