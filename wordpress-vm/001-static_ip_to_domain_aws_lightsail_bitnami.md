@@ -11,9 +11,11 @@ Bitnami
 يجب تحرير 4 ملفات وهي
 
 /opt/bitnami/apache2/conf/bitnami/bitnami.conf
+
 /opt/bitnami/apache/conf/bitnami/bitnami-ssl.conf
 
 /opt/bitnami/apache2/conf/vhosts/wordpress-vhost.conf
+
 /opt/bitnami/apache2/conf/vhosts/wordpress-https-vhost.conf
 
 وتعديل المحتوى 
