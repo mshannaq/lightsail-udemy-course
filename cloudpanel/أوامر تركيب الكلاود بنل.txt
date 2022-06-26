@@ -1,0 +1,4 @@
+sudo apt update && sudo apt -y upgrade && sudo apt -y install curl wget sudo
+
+sudo curl -sSL https://installer.cloudpanel.io/ce/v2/install.sh | sudo DB_ENGINE=MYSQL_5.7 bash
+
