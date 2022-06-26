@@ -1,0 +1,79 @@
+معرفة اصدار نظام التشغيل
+sudo cat /etc/os-release |grep VERSION=
+
+
+ترقية ديبيان 10 الى ديبيان 11
+
+
+sudo apt-mark showhold
+
+sudo apt --yes update
+
+sudo apt --yes upgrade
+
+sudo apt --yes full-upgrade
+
+sudo apt --yes autoremove
+
+
+sudo sed -i 's/buster/bullseye/g' /etc/apt/sources.list
+
+sudo sed -i 's/buster/bullseye/g' /etc/apt/sources.list.d/*.list
+
+sudo sed -i 's#/debian-security bullseye/updates# bullseye-security#g' /etc/apt/sources.list
+
+export LC_ALL=C 
+
+
+sudo apt-get --yes -fuy dist-upgrade
+
+sudo apt-get --yes  update
+
+sudo apt-get --yes  upgrade
+
+
+# الاجابة ب yes لجميع الشاشات التي تظهر عند تنفيذ هذا الامر
+# اختيار install the package maintainer's version 
+# عند السؤال
+
+#نقوم بتنفيذ الامر التالي لمعرفة الاصدار الحالي
+cat /etc/os-release |grep VERSION=
+
+#بعدها نقوم بتنفيذ الامر التالي من اجل تحديث اي برمجيات للاصدار الجديد
+
+sudo apt --yes update && sudo apt --yes upgrade
+
+--------
+
+
+
+
+بعد الترقية قد تظهر مشكلة في Lightsail تحديدا وهي عدم القدرة على الدخول الى السيرفر SSH من خلال منصة Lightsail في حال ظهور هذه المشكلة فعليا فانه لحل هذه المشكلة نقوم على تنفيذ الاوامر التالية بعد ان ندخل SSH من خلال برنامج Putty
+
+
+
+نقوم على تحرير الملف
+/etc/ssh/sshd_config
+
+sudo nano /etc/ssh/sshd_config
+
+ونضع في اخر الملف العبارات التالية
+
+TrustedUserCAKeys /etc/ssh/lightsail_instance_ca.pub
+
+CASignatureAlgorithms +ssh-rsa
+
+ونقوم بحفظ الملف ومن ثم اعادة تشغيل ssh 
+عن طريق الامر التالي:
+
+sudo /etc/init.d/ssh restart
+
+او بتنفيذ الامر التالي مباشرة
+
+sudo echo "TrustedUserCAKeys /etc/ssh/lightsail_instance_ca.pub" | sudo tee -a /etc/ssh/sshd_config && sudo systemctl restart ssh
+sudo echo "CASignatureAlgorithms +ssh-rsa" | sudo tee -a /etc/ssh/sshd_config && sudo systemctl restart ssh
+
+echo "CASignatureAlgorithms +ssh-rsa" >> /etc/ssh/sshd_config 
+sudo /etc/init.d/ssh restart
+
+
