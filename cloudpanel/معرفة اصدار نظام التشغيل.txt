@@ -1,0 +1,3 @@
+
+معرفة اصدار نظام التشغيل
+sudo cat /etc/os-release |grep VERSION=
