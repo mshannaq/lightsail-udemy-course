@@ -6,4 +6,4 @@ AWS Lightsail
 
 على موقع Udemy
 
-[https://www.udemy.com/course/4698638/](https://www.udemy.com/course/4698638/)
+[https://www.udemy.com/course/amazon-lightsail-in-arabic/?referralCode=7712407B86606133081D](https://www.udemy.com/course/amazon-lightsail-in-arabic/?referralCode=7712407B86606133081D)
